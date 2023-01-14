@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { name } from '/home/sabir/Рабочий стол/frontend-project-44/src/cli.js';
+import { name } from '../src/cli.js';
 
 const one = `May I have your name? ${name}`;
 const fir = `Hello, ${name}!`;

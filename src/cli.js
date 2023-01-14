@@ -1,3 +1,5 @@
-import readlineSync from '/home/sabir/Рабочий стол/frontend-project-44/readline-sync/lib/readline-sync.js';
+import readlineSync from 'readline-sync';
+
+export const rubi = 1;
 
 export const name = readlineSync.question('Your answer: ');
