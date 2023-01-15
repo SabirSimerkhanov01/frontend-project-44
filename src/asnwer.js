@@ -1,6 +1,12 @@
+import readlineSync from 'readline-sync';
+
+import start from './cli.js';
+
+const name = start();
+
 function randomNum() {
   const num = Math.random();
-  const pop = num * 50;
+  const pop = num * 65;
   const fir = Math.round(pop);
   return fir;
 }
@@ -23,21 +29,54 @@ function checkNumber(n) {
   } return result;
 }
 
-function game() {
+function correct3(word) {
   let result;
-  const fir = randomNum();
-  const pop = answer();
-  const sec = checkNumber(fir);
-  console.log('Answer "yes" if the number is even, otherwise answer "no"');
-  console.log(`Question: ${fir}`);
-  console.log(`Your answer: ${pop}`);
-  if (pop === sec) {
+  const random = randomNum();
+  if (word === 'Correct!') {
+    console.log(`Question: ${random}`);
+    const named = readlineSync.question('Your answer: ');
+    if (named === checkNumber(random)) {
+      result = `Congratulations, ${name}`;
+    } if (named !== checkNumber(random)) {
+      result = `'${named}' is wrong answer ;(. Correct answer was '${checkNumber(random)}'`;
+    }
+  } console.log(result);
+}
+
+function correct2(word) {
+  let result;
+  const random = randomNum();
+  if (word === 'Correct!') {
+    console.log(`Question: ${random}`);
+    const named = readlineSync.question('Your answer: ');
+    if (named === checkNumber(random)) {
+      result = 'Correct!';
+    } if (named !== checkNumber(random)) {
+      result = `'${named}' is wrong answer ;(. Correct answer was '${checkNumber(random)}'`;
+    }
+  } console.log(result);
+  if (result === 'Correct!') {
+    correct3(result);
+  }
+}
+
+export default function game() {
+  let result;
+  const randomn = randomNum();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(`Question: ${randomn}`);
+  const named = readlineSync.question('Your answer: ');
+  if (named !== checkNumber(randomn)) {
+    result = `'${named}' is wrong answer ;(. Correct answer was '${checkNumber(randomn)}'`;
+  }
+  if (named === checkNumber(randomn)) {
     result = 'Correct!';
-  } if (pop !== sec) {
-    result = `'${pop}' is wrong answer ;(. Correct answer was '${sec}'`;
-  } return result;
+  } console.log(result);
+  if (result === 'Correct!') {
+    correct2(result);
+  }
 }
 
 export {
-  game, randomNum, answer, checkNumber,
+  randomNum, answer, checkNumber, correct2, correct3,
 };
