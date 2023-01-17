@@ -4,15 +4,15 @@ import start from './cli.js';
 
 const nam = start();
 
-function generatorSign1(n) {
-  return Math.floor(Math.random() * n);
-}
-
-function randomNum() {
+function randomnum() {
   const num = Math.random();
   const pop = num * 65;
   const fir = Math.round(pop);
   return fir;
+}
+
+function generatorSign1(n) {
+  return Math.floor(Math.random() * n);
 }
 
 function generatorSign2() {
@@ -42,8 +42,8 @@ function doit(a, b, c) {
 
 function calcul3(word) {
   let result;
-  const genNum1 = randomNum();
-  const genNum2 = randomNum();
+  const genNum1 = randomnum();
+  const genNum2 = randomnum();
   const genSign = generatorSign2();
   const sum = (`${genNum1} ${genSign} ${genNum2}`);
   const share = sum.split(' ');
@@ -67,8 +67,8 @@ function calcul3(word) {
 
 function calcul2(word) {
   let result;
-  const genNum1 = randomNum();
-  const genNum2 = randomNum();
+  const genNum1 = randomnum();
+  const genNum2 = randomnum();
   const genSign = generatorSign2();
   const sum = (`${genNum1} ${genSign} ${genNum2}`);
   const share = sum.split(' ');
@@ -92,10 +92,10 @@ function calcul2(word) {
 
 export default function calcul() {
   let result;
-  const genNum1 = randomNum();
-  const genNum2 = randomNum();
+  const gennum1 = randomnum();
+  const gennum2 = randomnum();
   const genSign = generatorSign2();
-  const sum = (`${genNum1} ${genSign} ${genNum2}`);
+  const sum = (`${gennum1} ${genSign} ${gennum2}`);
   const share = sum.split(' ');
   const num1 = share[0];
   const num2 = share[2];
