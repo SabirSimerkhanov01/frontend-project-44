@@ -1,5 +1,5 @@
 function randomnum() {
-  const fir = Math.round(Math.random() * 65);
+  const fir = Math.round(Math.random() * 40);
   return fir;
 }
 
