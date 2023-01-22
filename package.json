@@ -1,14 +1,14 @@
 {
   "name": "@hexlet/code.",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/SabirSimerkhanov01/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/SabirSimerkhanov01/frontend-project-44/actions)",
+  "description": "project: brain-games (https://github.com/SabirSimerkhanov01/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/SabirSimerkhanov01/frontend-project-44/actions)",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js",
-    "brain-gcd": "bin/brain-gcd.js",
-    "brain-progression": "bin/brain-progression.js"
+    "brain-even": "bin/games/brain-even.js",
+    "brain-calc": "bin/games/brain-calc.js",
+    "brain-gcd": "bin/games/brain-gcd.js",
+    "brain-progression": "bin/games/brain-progression.js"
   },
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,6 @@
     "eslint-plugin-import": "^2.27.4"
   },
   "dependencies": {
-    "readfilesync": "^1.1.5",
     "readline-sync": "^1.4.10"
   }
 }
