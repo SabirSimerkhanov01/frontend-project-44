@@ -16,8 +16,9 @@ export default function doGame(task, generateNumber) {
       result = 'Correct!';
       console.log(result);
     } if (String(answers) !== String(answer)) {
-      console.log(`'${answers}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${userName}!`);
-      break;
+      const falseAnswer = (`'${answers}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${userName}!`);
+      console.log(falseAnswer);
+      return falseAnswer;
     } if (result === 'Correct!' && i === 2) {
       console.log(`Congratulations, ${userName}!`);
     }
