@@ -19,7 +19,7 @@ node.js: v18.7.0
 ## Games:
 
 <b><h4>Brain "Greeting"</h4></b>
-<a href=" https://asciinema.org/a/eh74C5KZcnKuT1eMZfizR5Fbc" target="_blank"><img src=" https://asciinema.org/a/eh74C5KZcnKuT1eMZfizR5Fbc" /></a>
+<a href=" https://asciinema.org/a/eh74C5KZcnKuT1eMZfizR5Fbc" target="_blank"><img src="https://asciinema.org/a/eh74C5KZcnKuT1eMZfizR5Fbc" /></a>
 
 <b><h4>Brain "Calculator"</h4></b>
 <a href="https://asciinema.org/a/LH6HPidNQP5P8rhU1AKUZS9x6" target="_blank"><img src="https://asciinema.org/a/LH6HPidNQP5P8rhU1AKUZS9x6" /></a>
