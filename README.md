@@ -12,12 +12,12 @@
 > npm link
 ```
 
-# [Brain-even] (https://asciinema.org/a/dhfDQup6HcUs3DSTLX3N1n7Xs)
+## [Brain-even] (https://asciinema.org/a/dhfDQup6HcUs3DSTLX3N1n7Xs).
 
-# [Brain-calc] (https://asciinema.org/a/qoRLgB6Hli7PHPgfszMnSgcIQ)
+## [Brain-calc] (https://asciinema.org/a/qoRLgB6Hli7PHPgfszMnSgcIQ).
 
-# [Brain-gcd]  (https://asciinema.org/a/27eaR9eMwICV4cKTVf8ZXLKbG)
+## [Brain-gcd]  (https://asciinema.org/a/27eaR9eMwICV4cKTVf8ZXLKbG).
 
-# [Brain-progression] (https://asciinema.org/a/VzjDBxaYVexL1AsuqCX3RwvcX)
+## [Brain-progression] (https://asciinema.org/a/VzjDBxaYVexL1AsuqCX3RwvcX).
 
-# [Brain-prime] (https://asciinema.org/a/R5RIdROeTSvyfcA4COStZJAit)
+## [Brain-prime] (https://asciinema.org/a/R5RIdROeTSvyfcA4COStZJAit).
