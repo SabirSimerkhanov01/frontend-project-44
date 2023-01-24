@@ -22,5 +22,5 @@ export default function doGame(task, generateNumber) {
     } if (result === 'Correct!' && i === 2) {
       console.log(`Congratulations, ${userName}!`);
     }
-  }
+  } return result;
 }
