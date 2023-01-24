@@ -14,7 +14,7 @@ function getRandomInRange(min, max) {
 function getProgression() {
   const num = getRandomNum();
   const num2 = getRandomInRange(0, 9);
-  const log = (`${num} ${num * 2} ${num * 3} ${num * 4} ${num * 5} ${num * 6} ${num * 7} ${num * 8} ${num * 9} ${num * (num2 + 1)}`);
+  const log = (`${num} ${num * 2} ${num * 3} ${num * 4} ${num * 5} ${num * 6} ${num * 7} ${num * 8} ${num * 9}`);
   const share = log.split(' ');
   share[num2] = '..';
   const toString = share.join(' ');
