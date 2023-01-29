@@ -1,11 +1,6 @@
-#!/usr/bin/env node
+import doGame from '../index.js';
 
-import doGame from '../../src/index.js';
-
-function getRandomNum() {
-  const fir = Math.round(Math.random() * 65);
-  return fir;
-}
+import getRandomNum from '../getRandomNumber.js';
 
 function getCommonShare(a, b) {
   let num1 = a;
@@ -22,13 +17,11 @@ function getCommonShare(a, b) {
 const generateNumber = () => {
   const firstNum = getRandomNum();
   const secondNum = getRandomNum();
-  const answer = getCommonShare(firstNum, secondNum);
+  const answer = String(getCommonShare(firstNum, secondNum));
   const question = `${firstNum} ${secondNum}`;
   return [question, answer];
 };
 
-export default doGame('Find the greatest common divisor of given numbers.', generateNumber);
-
-export {
-  getCommonShare, getRandomNum, generateNumber,
-};
+export default function playGameGcd() {
+  doGame('Find the greatest common divisor of given numbers.', generateNumber);
+}

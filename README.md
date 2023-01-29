@@ -19,19 +19,19 @@ node.js: v18.7.0
 ## Games:
 
 <b><h4>Brain "Greeting"</h4></b>
-<a href=" https://asciinema.org/a/eh74C5KZcnKuT1eMZfizR5Fbc" target="_blank"><img src="https://asciinema.org/a/eh74C5KZcnKuT1eMZfizR5Fbc" /></a>
+<a href="https://asciinema.org/a/eh74C5KZcnKuT1eMZfizR5Fbc" target="_blank"><img src="https://asciinema.org/a/eh74C5KZcnKuT1eMZfizR5Fbc.svg" /></a>
 
 <b><h4>Brain "Calculator"</h4></b>
-<a href="https://asciinema.org/a/LH6HPidNQP5P8rhU1AKUZS9x6" target="_blank"><img src="https://asciinema.org/a/LH6HPidNQP5P8rhU1AKUZS9x6" /></a>
+<a href="https://asciinema.org/a/LH6HPidNQP5P8rhU1AKUZS9x6" target="_blank"><img src="https://asciinema.org/a/LH6HPidNQP5P8rhU1AKUZS9x6.svg" /></a>
 
 <b><h4>Brain "Greatest Common Divisor"</h4></b>
-<a href="https://asciinema.org/a/ltBZgf24eVgM5iyL9JKPaOgGz" target="_blank"><img src="https://asciinema.org/a/ltBZgf24eVgM5iyL9JKPaOgGz" /></a>
+<a href="https://asciinema.org/a/ltBZgf24eVgM5iyL9JKPaOgGz" target="_blank"><img src="https://asciinema.org/a/ltBZgf24eVgM5iyL9JKPaOgGz.svg" /></a>
 
 <b><h4>Brain "Progression"</h4></b>
-<a href="https://asciinema.org/a/VzjDBxaYVexL1AsuqCX3RwvcX" target="_blank"><img src="https://asciinema.org/a/VzjDBxaYVexL1AsuqCX3RwvcX" /></a>
+<a href="https://asciinema.org/a/VzjDBxaYVexL1AsuqCX3RwvcX" target="_blank"><img src="https://asciinema.org/a/VzjDBxaYVexL1AsuqCX3RwvcX.svg" /></a>
 
 <b><h4>Brain "Prime"</h4></b>
-<a href="https://asciinema.org/a/pFrgzvDrVpPiq5vWEaXmToknR" target="_blank"><img src="https://asciinema.org/a/pFrgzvDrVpPiq5vWEaXmToknR" /></a>
+<a href="https://asciinema.org/a/pFrgzvDrVpPiq5vWEaXmToknR" target="_blank"><img src="https://asciinema.org/a/pFrgzvDrVpPiq5vWEaXmToknR.svg" /></a>
 
 <b><h4>Brain "Even"</h4></b>
-<a href="https://asciinema.org/a/4ZvE32RTeNVgIcZYsIifJAiiO" target="_blank"><img src="https://asciinema.org/a/4ZvE32RTeNVgIcZYsIifJAiiO" /></a>
+<a href="https://asciinema.org/a/4ZvE32RTeNVgIcZYsIifJAiiO" target="_blank"><img src="https://asciinema.org/a/4ZvE32RTeNVgIcZYsIifJAiiO.svg" /></a>
