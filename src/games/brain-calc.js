@@ -2,35 +2,37 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
-import generateSign from '../getSign.js';
+const generateSign = () => {
+  const array = ['+', '-', '*'];
+  const generateNum = Math.floor(Math.random() * (array.length));
+  return array[generateNum];
+};
 
-function calcOfNumber(number1, operator, number2) {
-  let result;
+const calcOfNumber = (number1, operator, number2) => {
   switch (operator) {
     case '+':
-      result = number1 + number2;
-      break;
+      return number1 + number2;
     case '-':
-      result = number1 - number2;
-      break;
+      return number1 - number2;
     case '*':
-      result = number1 * number2;
-      break;
+      return number1 * number2;
     default:
-      console.log('Invalid operator');
-      break;
-  } return result;
-}
+      throw new Error('Invalid operator');
+  }
+};
 
-const generateNumber = () => {
-  const firstNum = getRandomNum();
-  const secondNum = getRandomNum();
+const generateQuestionAndAnswer = () => {
+  const increaseTheRangeOfNumbers = 100;
+  const firstNum = getRandomNum(increaseTheRangeOfNumbers);
+  const secondNum = getRandomNum(increaseTheRangeOfNumbers);
   const randomOperator = generateSign(3);
   const answer = String(calcOfNumber(firstNum, randomOperator, secondNum));
   const questions = `${firstNum} ${randomOperator} ${secondNum}`;
   return [questions, answer];
 };
 
-export default function playGameCalc() {
-  doGame('What is the result of the expression?', generateNumber);
-}
+const playGameCalc = () => {
+  doGame('What is the result of the expression?', generateQuestionAndAnswer);
+};
+
+export default playGameCalc;

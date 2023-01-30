@@ -2,22 +2,27 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
-function getRandomInRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1));
-}
+const getRandomInRange = (min, max) => {
+  const result = Math.floor(Math.random() * (max - min + 1));
+  return result;
+};
 
-function getProgression() {
+const getProgression = () => {
   const result = [];
   let answer = [];
-  const num = getRandomNum();
-  const num2 = getRandomInRange(0, 9);
-  for (let i = num; i < num + 10; i += 1) {
-    result.push(num * i);
-    answer = result[num2];
-  } result[num2] = '..';
+  const increaseTheRangeOfNumbers = 100;
+  const randomNum = getRandomNum(increaseTheRangeOfNumbers);
+  const randomNumInRange = getRandomInRange(0, 9);
+  const sumNumberOfProgression = 10;
+  for (let i = randomNum; i < randomNum + sumNumberOfProgression; i += 1) {
+    result.push(randomNum * i);
+    answer = result[randomNumInRange];
+  } result[randomNumInRange] = '..';
   return [result.join(' '), String(answer)];
-}
+};
 
-export default function playGameProgression() {
+const playGameProgression = () => {
   doGame('What number is missing in the progression?', getProgression);
-}
+};
+
+export default playGameProgression;
