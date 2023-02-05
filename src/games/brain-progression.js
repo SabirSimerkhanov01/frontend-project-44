@@ -2,27 +2,40 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
-const getRandomInRange = (min, max) => {
+const text = 'What number is missing in the progression?';
+
+const countNumberOfProgression = 10;
+
+const getRandomInRange = (min = 0, max = 9) => {
   const result = Math.floor(Math.random() * (max - min + 1));
   return result;
 };
 
-const getProgression = () => {
+const getProgression = (progressionCount, randomNum) => {
   const result = [];
-  let answer = [];
-  const increaseTheRangeOfNumbers = 100;
-  const randomNum = getRandomNum(increaseTheRangeOfNumbers);
-  const randomNumInRange = getRandomInRange(0, 9);
-  const sumNumberOfProgression = 10;
-  for (let i = randomNum; i < randomNum + sumNumberOfProgression; i += 1) {
+  for (let i = randomNum; i < randomNum + progressionCount; i += 1) {
     result.push(randomNum * i);
-    answer = result[randomNumInRange];
-  } result[randomNumInRange] = '..';
-  return [result.join(' '), String(answer)];
+  }
+  return result;
+};
+
+const hideElementInProgression = (progression) => {
+  const lengthProgression = progression.length - 1;
+  const hideElement = getRandomInRange(0, lengthProgression);
+  return hideElement;
+};
+
+const madeDataForRound = () => {
+  const randomNumber = getRandomNum();
+  const progression = getProgression(countNumberOfProgression, randomNumber);
+  const hideElement = hideElementInProgression(progression);
+  const answer = progression[hideElement];
+  progression[hideElement] = '..';
+  return [progression.join(' '), String(answer)];
 };
 
 const playGameProgression = () => {
-  doGame('What number is missing in the progression?', getProgression);
+  doGame(text, madeDataForRound);
 };
 
 export default playGameProgression;

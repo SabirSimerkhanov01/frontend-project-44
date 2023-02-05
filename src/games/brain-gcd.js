@@ -2,6 +2,8 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
+const text = 'Find the greatest common divisor of given numbers.';
+
 const getCommonShare = (a, b) => {
   let num1 = a;
   let num2 = b;
@@ -11,20 +13,20 @@ const getCommonShare = (a, b) => {
     } else {
       num2 %= num1;
     }
-  } return num1 + num2;
+  }
+  return num1 + num2;
 };
 
 const generateQuestionAndAnswer = () => {
-  const increaseTheRangeOfNumbers = 100;
-  const firstNum = getRandomNum(increaseTheRangeOfNumbers);
-  const secondNum = getRandomNum(increaseTheRangeOfNumbers);
+  const firstNum = getRandomNum();
+  const secondNum = getRandomNum();
   const answer = String(getCommonShare(firstNum, secondNum));
   const question = `${firstNum} ${secondNum}`;
   return [question, answer];
 };
 
 const playGameGcd = () => {
-  doGame('Find the greatest common divisor of given numbers.', generateQuestionAndAnswer);
+  doGame(text, generateQuestionAndAnswer);
 };
 
 export default playGameGcd;

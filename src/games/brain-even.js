@@ -2,30 +2,19 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
-const checkEvenOrOddNumber = (firstNum) => {
-  let result;
-  if (Number(firstNum) % 2 === 0) {
-    result = true;
-  } if (Number(firstNum) % 2 !== 0) {
-    result = false;
-  } return result;
-};
+const text = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const checkEvenOrOddNumber = (n) => !(n % 2);
 
 const generateQuestionAndAnswer = () => {
-  const increaseTheRangeOfNumbers = 100;
-  const firstNum = getRandomNum(increaseTheRangeOfNumbers);
-  const questions = `${firstNum}`;
-  let answer = checkEvenOrOddNumber(firstNum);
-  if (answer === true) {
-    answer = 'yes';
-  } else {
-    answer = 'no';
-  }
-  return [questions, answer];
+  const firstNum = getRandomNum();
+  const question = `${firstNum}`;
+  const answer = checkEvenOrOddNumber(firstNum) ? 'yes' : 'no';
+  return [question, answer];
 };
 
 const playGameEven = () => {
-  doGame('Answer "yes" if the number is even, otherwise answer "no".', generateQuestionAndAnswer);
+  doGame(text, generateQuestionAndAnswer);
 };
 
 export default playGameEven;

@@ -2,9 +2,12 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
+const array = ['+', '-', '*'];
+
+const text = 'What is the result of the expression?';
+
 const generateSign = () => {
-  const array = ['+', '-', '*'];
-  const generateNum = Math.floor(Math.random() * (array.length));
+  const generateNum = getRandomNum(array.length - 1);
   return array[generateNum];
 };
 
@@ -22,17 +25,16 @@ const calcOfNumber = (number1, operator, number2) => {
 };
 
 const generateQuestionAndAnswer = () => {
-  const increaseTheRangeOfNumbers = 100;
-  const firstNum = getRandomNum(increaseTheRangeOfNumbers);
-  const secondNum = getRandomNum(increaseTheRangeOfNumbers);
-  const randomOperator = generateSign(3);
+  const firstNum = getRandomNum();
+  const secondNum = getRandomNum();
+  const randomOperator = generateSign();
   const answer = String(calcOfNumber(firstNum, randomOperator, secondNum));
-  const questions = `${firstNum} ${randomOperator} ${secondNum}`;
-  return [questions, answer];
+  const question = `${firstNum} ${randomOperator} ${secondNum}`;
+  return [question, answer];
 };
 
 const playGameCalc = () => {
-  doGame('What is the result of the expression?', generateQuestionAndAnswer);
+  doGame(text, generateQuestionAndAnswer);
 };
 
 export default playGameCalc;
