@@ -1,7 +1,6 @@
-const getRandomNum = (n = 100) => {
-  const increaseTheRangeOfNumbers = n;
-  const number = Math.round(Math.random() * increaseTheRangeOfNumbers);
-  return number;
+const getRandomNum = (min = 0, max = 1000) => {
+  const result = Math.floor(Math.random() * (max - min + 1));
+  return result;
 };
 
 export default getRandomNum;

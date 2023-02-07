@@ -2,9 +2,9 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
-const text = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const textForQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isJustOrHardNumber = (answ) => {
+const isPrimeNumber = (answ) => {
   if (answ < 2) { return false; }
   const fixedNumber = Math.floor(Math.sqrt(answ));
   for (let i = 2; i <= fixedNumber; i += 1) {
@@ -17,12 +17,12 @@ const isJustOrHardNumber = (answ) => {
 
 const generateQuestionAndAnswer = () => {
   const randomNum = getRandomNum();
-  const answer = isJustOrHardNumber(randomNum) ? 'yes' : 'no';
+  const answer = isPrimeNumber(randomNum) ? 'yes' : 'no';
   return [randomNum, answer];
 };
 
 const playGamePrime = () => {
-  doGame(text, generateQuestionAndAnswer);
+  doGame(textForQuestion, generateQuestionAndAnswer);
 };
 
 export default playGamePrime;

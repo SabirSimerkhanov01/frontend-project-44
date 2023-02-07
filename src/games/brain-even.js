@@ -2,19 +2,19 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
-const text = 'Answer "yes" if the number is even, otherwise answer "no".';
+const textForQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const checkEvenOrOddNumber = (n) => !(n % 2);
+const isEvenOrOddNumber = (n) => !(n % 2);
 
 const generateQuestionAndAnswer = () => {
   const firstNum = getRandomNum();
   const question = `${firstNum}`;
-  const answer = checkEvenOrOddNumber(firstNum) ? 'yes' : 'no';
+  const answer = isEvenOrOddNumber(firstNum) ? 'yes' : 'no';
   return [question, answer];
 };
 
 const playGameEven = () => {
-  doGame(text, generateQuestionAndAnswer);
+  doGame(textForQuestion, generateQuestionAndAnswer);
 };
 
 export default playGameEven;

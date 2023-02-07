@@ -2,14 +2,9 @@ import doGame from '../index.js';
 
 import getRandomNum from '../getRandomNumber.js';
 
-const text = 'What number is missing in the progression?';
+const textForQuestion = 'What number is missing in the progression?';
 
 const countNumberOfProgression = 10;
-
-const getRandomInRange = (min = 0, max = 9) => {
-  const result = Math.floor(Math.random() * (max - min + 1));
-  return result;
-};
 
 const getProgression = (progressionCount, randomNum) => {
   const result = [];
@@ -21,7 +16,7 @@ const getProgression = (progressionCount, randomNum) => {
 
 const hideElementInProgression = (progression) => {
   const lengthProgression = progression.length - 1;
-  const hideElement = getRandomInRange(0, lengthProgression);
+  const hideElement = getRandomNum(0, lengthProgression);
   return hideElement;
 };
 
@@ -35,7 +30,7 @@ const madeDataForRound = () => {
 };
 
 const playGameProgression = () => {
-  doGame(text, madeDataForRound);
+  doGame(textForQuestion, madeDataForRound);
 };
 
 export default playGameProgression;
