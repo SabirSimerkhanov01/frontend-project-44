@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
-import cli from "../src/cli.js";
+import greeting from "../src/cli.js";
+import brainEven from "./brain-even.js";
 
-cli();
+let name = greeting();
+
+brainEven(name);
