@@ -45,14 +45,14 @@ const cycle = () => {
         }
     
         let commons = [...firstDividers, ...secondDividers].sort();
-        let nodes = [];
+        let largCD = [];
         for (let i = 0; i < commons.length; i += 1) {
             if (commons[i] === commons[i + 1]) {
-                nodes.push(commons[i]);
+                largCD.push(commons[i]);
             }
         }
     
-        state.correctAnswer = nodes[nodes.length - 1];
+        state.correctAnswer = largCD[largCD.length - 1];
     }
 
     state.currentAnswer = Number(readLineSync.question('Your answer: '));
