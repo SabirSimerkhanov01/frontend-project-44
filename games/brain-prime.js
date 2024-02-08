@@ -25,7 +25,7 @@ const cycle = () => {
         }
     }
 
-    state.correctAnswer = state.randNum !== arr[1] && arr[0] === 1 ? 'yes' : 'no';
+    state.correctAnswer = state.randNum === arr[1] && arr[0] === 1 ? 'yes' : 'no';
 
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     console.log(`Question: ${state.randNum}`);
